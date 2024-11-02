@@ -1,0 +1,28 @@
+test_list_int (test.Test01_AddContact.test_list_int)
+*** Test01 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: contacts.add_contact(id = '7145551212', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates'], '7145551212': ['Richard', 'Stallman']} *** ... 
+ok
+test_list_int (test.Test02_AddContact.test_list_int)
+*** Test02 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.add_contact(id = '7145551212', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates'], '7145551212': ['Richard', 'Stallman']} *** ... 
+ok
+test_list_int (test.Test03_ModifyContact.test_list_int)
+*** Test03 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: contacts.modify_contact(id = '7145551111', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: filename t99.dat = {'5625553333': ['Bill', 'Gates'], '7145551111': ['Richard', 'Stallman']} *** ... 
+ok
+test_list_int (test.Test04_ModifyContact.test_list_int)
+*** Test04 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.modify_contact(id = '7145559999', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' *** ... 
+ok
+test_list_int (test.Test05_DeleteContact.test_list_int)
+*** Test05 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: contacts.delete_contact(id = '7145551111') *** EXPECT: filename t99.dat = {'5625553333': ['Bill', 'Gates']} *** ... 
+ok
+test_list_int (test.Test06_DeleteContact.test_list_int)
+*** Test06 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.delete_contact(id = '7145551111') *** EXPECT: r = 'error' *** ... 
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+OK
+
+
+
+
+
